@@ -15,9 +15,9 @@
         Return 5
     End Function
 
-    Function sum(ByVal firstNumber As Integer, ByVal secondNumber As Integer) As Integer
-        Console.WriteLine($"in sum secondNumber is {secondNumber}")
-        Return firstNumber + secondNumber
+    Function sum(ByVal firstNumber As Integer, ByVal numTwo As Integer) As Integer
+        Console.WriteLine($"in sum secondNumber is {numTwo}")
+        Return firstNumber + numTwo
     End Function
 
 End Module
