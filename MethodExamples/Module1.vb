@@ -1,23 +1,30 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim secondNumber As Integer = 6
-        Console.WriteLine($"in main secondNumber is {secondNumber}")
-        'Console.WriteLine(firstNumber() + secondNumber)
-        Console.WriteLine(sum(3, 8))
-        Console.WriteLine($"in after sum and back in main secondNumber is {secondNumber}")
+        Dim charge As Integer = 5
+        For i = 1 To 10
+            Console.WriteLine(RunningTotal(charge))
+        Next
 
-
+        Console.WriteLine(RunningTotal(0))
         Console.Read()
     End Sub
 
-    Function firstNumber() As Integer
-        Return 5
+    Function RunningTotal(ByVal currentCharge As Integer) As Integer
+        Static _runningTotal As Integer
+
+        _runningTotal = _runningTotal + currentCharge
+
+        Return _runningTotal
     End Function
 
-    Function sum(ByVal firstNumber As Integer, ByVal numTwo As Integer) As Integer
-        Console.WriteLine($"in sum secondNumber is {numTwo}")
-        Return firstNumber + numTwo
-    End Function
+    'Function firstNumber() As Integer
+    '    Return 5
+    'End Function
+
+    'Function sum(ByVal firstNumber As Integer, ByVal numTwo As Integer) As Integer
+    '    Console.WriteLine($"in sum secondNumber is {numTwo}")
+    '    Return firstNumber + numTwo
+    'End Function
 
 End Module
