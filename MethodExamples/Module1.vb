@@ -7,13 +7,15 @@
         Next
 
         Console.WriteLine(RunningTotal(0))
-        Console.ReadLine()
+        Console.Read()
     End Sub
 
     Function RunningTotal(ByVal currentCharge As Integer) As Integer
         Static _runningTotal As Integer
+        For i = 1 To 10
+            _runningTotal = _runningTotal + currentCharge
+        Next
 
-        _runningTotal = _runningTotal + currentCharge
 
         Return _runningTotal
     End Function
