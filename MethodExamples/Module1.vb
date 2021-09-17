@@ -7,7 +7,7 @@
         Next
 
         Console.WriteLine(RunningTotal(0))
-        Console.Read()
+        Console.ReadLine()
     End Sub
 
     Function RunningTotal(ByVal currentCharge As Integer) As Integer
